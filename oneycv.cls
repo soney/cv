@@ -3,7 +3,7 @@
 \LoadClass{article}
 
 \usepackage{fontspec}
-\setmainfont[Path=fonts/]{OFLGoudyStMTT.ttf}
+\setmainfont[Path=fonts/, BoldFont={GoudyOldStyle Bold.ttf}]{GoudyOldStyle.ttf}
 
 
 \RequirePackage{titlesec}
