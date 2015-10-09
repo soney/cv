@@ -15,7 +15,7 @@
 \usepackage{scrextend}
 
 \definecolor{mygray}{gray}{0.6}
-\definecolor{darkgray}{gray}{0.0}
+\definecolor{darkgray}{gray}{0.4}
 
 \def\@colwidth1{1.5in}
 
@@ -28,18 +28,19 @@
 \RequirePackage{titlesec}
 
 \def\hrulefill{\leavevmode\leaders\hrule height .01cm\hfill\kern\z@}
+\def\thinhrulefill{\leavevmode\leaders\hrule height .001cm\hfill\kern\z@}
 
 \titleformat{\section}
     {\bf\raggedright\fontsize{16pt}{16}\selectfont}
     {\vspace{24pt}}{\@colwidth1}
     {}
-    [\vspace{-10pt}\hspace{\@colwidth1}\hrulefill\vspace{-6pt}]
+    [\vspace{-10pt}\hspace{\@colwidth1}\color{black}\hrulefill\vspace{-6pt}]
 
 \titleformat{\subsection}
-    {\color{darkgray}\raggedright\fontsize{12pt}{12}\selectfont}
+    {\raggedright\fontsize{12pt}{12}\selectfont}
     {}{\@colwidth1}
     {}
-    [\vspace{-6pt}\hspace{\@colwidth1}\color{darkgray}\hrulefill\vspace{-8pt}]
+    [\vspace{-6pt}\hspace{\@colwidth1}\color{darkgray}\thinhrulefill\vspace{-8pt}]
 
 
 %\titleformat{\section}         % Customise the \section command 
