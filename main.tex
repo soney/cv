@@ -6,32 +6,55 @@
 \department{School of Information}
 \address{4381 North Quadrangle}{105 South State Street}{Ann Arbor, MI 48109}
 
-\phone{1 (734) 999-0246}
+\phone{1 (734) 999--0246}
 \homepage{http://from.so}
 \email{soney@umich.edu}
+\begin{acronym}
+    \acro{HCI}{Human-Computer Interaction}
+    \acro{NSF}{National Science Foundation}
+    \acro{PI}{PI}
+    \acro{CS}{Computer Science}
+    \acro{co-PI}{co-PI}
+\end{acronym}
+
+\acused{HCI}
+\acused{NSF}
+\acused{PI}
+\acused{co-PI}
+
+% The UMSI P&T reviews requires that students' names
+% be underlined. These commands are "activated" if I'm
+% compiling for a P&T review:
+% \newcommand{\underlinestudents}[1]{#1}
+% \newcommand{\student}[1]{\underline{#1}}
+
+% Regular CV (students aren't underlined):
+\newcommand{\underlinestudents}[1]{}
+\newcommand{\student}[1]{#1}
+
+\newcommand{\me}[1]{\textbf{#1}}
+
+\urlstyle{same}
+
+\definecolor{mblue}{RGB}{0,39,76}
+\newcommand{\pdflink}[2]{\href{#1}{\smaller{\color{mblue}{(PDF)}}}}
+\newcommand{\honorable}{\includegraphics[height=\fontcharht\font`\B]{images/honorable.pdf}}
+\newcommand{\best}{\includegraphics[height=\fontcharht\font`\B]{images/best.pdf}}
+
 
 \begin{document}
 
 \makecvtitle
-\section{Education}
-\input{education}
-\section{Professional Experience}
-\input{experience}
-\section{Publications}
-\input{publications}
-\section{Awards}
-\input{awards}
-\section{Invited Presentations}
-\input{invited}
-\section{Service}
-\input{service}
-\section{Teaching}
-\input{teaching}
-\section{Students Supervised}
-\input{supervised}
-\section{Press}
-\input{press}
-\section{Patents and Applications}
-\input{patents}
+\section{Education} \input{education}
+\section{Professional Experience} \input{experience}
+\section{Publications} \input{publications}
+\section{Grants} \input{grants}
+\section{Awards} \input{awards}
+\section{Invited Presentations} \input{invited}
+\section{Service} \input{service}
+\section{Teaching} \input{teaching}
+\section{Students Supervised} \input{supervised}
+\section{Press} \input{press}
+\section{Patent} \input{patents}
 
 \end{document}

@@ -10,9 +10,12 @@
 \usepackage{dirtytalk}
 \usepackage{parcolumns}
 \usepackage[letterpaper,left=0.75in,right=0.75in,top=0.5in,bottom=1.7in]{geometry}
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{setspace}
 \usepackage{scrextend}
+\usepackage[nolist,nohyperlinks,smaller]{acronym}
+\usepackage{lastpage}
+\usepackage{datetime}
 
 \definecolor{mygray}{gray}{0.6}
 \definecolor{darkgray}{gray}{0.4}
@@ -63,6 +66,7 @@
 \begin{minipage}[b]{0.60\linewidth}
 \vspace*{36pt}
 
+
 \addfontfeature{LetterSpace=-1}
 \hspace{\@colwidth1}{\fontsize{30}{36}\selectfont{}\@firstname{}\ \@lastname{}}\par
 \vspace*{12pt}
@@ -71,14 +75,16 @@
 \hspace{\@colwidth1}\textbf{\@affiliation}\par
 \hspace{\@colwidth1}\@addressoffice\par
 \hspace{\@colwidth1}\@addressstreet\par
-\hspace{\@colwidth1}\@addresscity
+\hspace{\@colwidth1}\@addresscity\par
 \end{minipage}
 \hfill
 \begin{minipage}[b]{0.35\linewidth}
 \raggedleft
 \href{\@homepage}{\@homepage}\par
 \@phone\par
-\href{mailto:\@email}{\@email}
+\href{mailto:\@email}{\@email}\par
+\newdateformat{updatedate}{\shortmonthname{} \THEYEAR{}}  
+\textit{(updated \updatedate{\today{}})}
 \end{minipage}
 }
 
@@ -118,7 +124,7 @@
 \pagestyle{fancy}
 \fancyhf{}% to clear existing header/footer if you don't want it
 \renewcommand\headrulewidth{0pt}
-\cfoot{\raggedleft{}\textcolor{mygray}{\textbf{\@firstname{}\ \@lastname{}}\  \textemdash{}\ \textit{curriculum\ vitae}, page \thepage{}}}
+\cfoot{\raggedleft{}\textcolor{mygray}{\textbf{\@firstname{}\ \@lastname{}}\  \textemdash{}\ curriculum\ vitae, page \thepage{} of \pageref{LastPage}}}
 
 \linespread{0.9}
 %\usepackage{showframe}
